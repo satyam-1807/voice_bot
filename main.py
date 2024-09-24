@@ -27,11 +27,11 @@ class Settings(BaseSettings):
     These parameters can be configured with environment variables.
     """
 
-    openai_api_key: str = "sk-proj-8dMh435vAkkx70BD3zP1T3BlbkFJJSkuEushVxuEQ5PYAkkw"
-    azure_speech_key: str = "d31436658f234e619bab457ccbb8bcf1"
-    deepgram_api_key: str = "92c1f9b1e9e58fadd18cd5d646346499b59d8959"
+    openai_api_key: str = "your_openai_api_key"
+    azure_speech_key: str = "Your_azure_speech_key"
+    deepgram_api_key: str = "Your_deepgram_api_key"
 
-    azure_speech_region: str = "eastus"
+    azure_speech_region: str = "Your_Azure_speech_region"
 
     # This means a .env file can be used to overload these settings
     # ex: "OPENAI_API_KEY=my_key" will set openai_api_key over the default above
@@ -66,7 +66,7 @@ async def main():
         ),
         agent=FlowiseAgent(  # Use FlowiseAgent
             FlowiseAgentConfig(
-                flowise_api_url="https://dev-llm.deeptalk.work/api/v1/prediction/c7686ede-9366-4d66-967c-7b56a790afe4",
+                flowise_api_url="Your_agent_api_url",
                 chat_id=str(uuid.uuid4())
             )
         ),
